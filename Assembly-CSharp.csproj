@@ -56,7 +56,7 @@
      <Compile Include="Assets\Scripts\ghostcontrol.cs" />
      <Compile Include="Assets\Scripts\makeenemy.cs" />
      <Compile Include="Assets\Scripts\makepotion.cs" />
-     <Compile Include="Assets\Scripts\makewall.cs" />
+     <Compile Include="Assets\Scripts\makevoldemort.cs" />
      <Compile Include="Assets\Scripts\Patrol.cs" />
      <Compile Include="Assets\Scripts\potioncontrol.cs" />
      <Compile Include="Assets\Scripts\score.cs" />

@@ -5,13 +5,14 @@ using UnityEngine;
 public class collisioncontrol : MonoBehaviour
 {
 	public GameObject magic;
-	makewall makewall;
+	makevoldemort makevoldemort;
 	makeenemy makeenemy;
-
+	controls  controls;
 
 	void Start () {
-		makewall = GameObject.Find ("ScriptWall").GetComponent<makewall> ();
+		makevoldemort = GameObject.Find ("ScriptVoldemort").GetComponent<makevoldemort> ();
 		makeenemy = GameObject.Find("ScriptEnemy").GetComponent<makeenemy> ();
+		controls = GameObject.Find ("Harry").GetComponent<controls> ();
 	}
 
 
@@ -33,9 +34,11 @@ public class collisioncontrol : MonoBehaviour
 				if (collision.gameObject.tag.Equals ("magic"))
 					Destroy (collision.gameObject);
 				else if (collision.gameObject.tag.Equals ("Player")) {
-					Destroy (collision.gameObject);
-					makewall.isgameactive = false;
+					collision.gameObject.GetComponent<Animator> ().enabled = true;
+					Destroy (collision.gameObject, 4f);
+					makevoldemort.isgameactive = false;
 					makeenemy.isgameactive = false;
+					collision.gameObject.GetComponent<AudioSource> ().PlayOneShot (controls.deadVoice, 1f);
 				}
 			}
 	}

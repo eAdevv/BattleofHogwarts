@@ -10,6 +10,7 @@ TagManager:
   - wall
   - ghost
   - Potion
+  - background
   layers:
   - Default
   - TransparentFX

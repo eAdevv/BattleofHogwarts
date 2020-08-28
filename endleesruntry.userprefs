@@ -1,6 +1,18 @@
-﻿<Properties>
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Patrol.cs">
+    <Files>
+      <File FileName="Assets\Scripts\collisioncontrol.cs" Line="46" Column="2" />
+      <File FileName="Assets\Scripts\controls.cs" Line="33" Column="61" />
+      <File FileName="Assets\Scripts\makeenemy.cs" Line="49" Column="3" />
+      <File FileName="Assets\Scripts\makevoldemort.cs" Line="68" Column="71" />
+      <File FileName="Assets\Scripts\makepotion.cs" Line="27" Column="44" />
+      <File FileName="Assets\Scripts\ghostcontrol.cs" Line="23" Column="4" />
+      <File FileName="Assets\Scripts\potioncontrol.cs" Line="32" Column="24" />
+      <File FileName="Assets\Scripts\Patrol.cs" Line="21" Column="2" />
+      <File FileName="Assets\Scripts\score.cs" Line="8" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

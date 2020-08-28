@@ -4,22 +4,36 @@ using UnityEngine;
 
 public class potioncontrol : MonoBehaviour {
 
-	public GameObject player;
-	public float GreenPotionEffectTime , RedPotionEffectTime;
-	makewall makewall;
-	makeenemy makeenemy;
-	controls control;
+	public int Effect;
+	makepotion makepotion;
+	score score;
 	void Start () {
+		makepotion = GameObject.Find ("ScriptPotion").GetComponent<makepotion> ();	
+		score = GameObject.Find ("Harry").GetComponent<score> ();
+	}
+
+	void Update () {
 		
-		makewall = GameObject.Find ("ScriptWall").GetComponent<makewall> ();
-		makeenemy = GameObject.Find("ScriptEnemy").GetComponent<makeenemy> ();
-		control = GameObject.Find ("oyuncu").GetComponent<controls> ();
 	}
-	
-	void OnTriggerEnter2D(Collider2D collider){
 
-		if (collider.gameObject.tag.Equals("Player")) {
+		
+	void OnTriggerEnter2D(Collider2D collider)
+	{
+		
+		if (collider.gameObject.tag == "Player") 
+		{
+			makepotion.PotionActive = false;
+			Destroy (this.gameObject);
 
+			GameObject[] Ghosts = GameObject.FindGameObjectsWithTag ("enemy");
+			for (int i = 0; i < Ghosts.Length; i++)
+			{
+				Destroy (Ghosts [i]);
+				score.point += 100;
+			}
+			
+		} 
 	}
-}
+
+
 }
