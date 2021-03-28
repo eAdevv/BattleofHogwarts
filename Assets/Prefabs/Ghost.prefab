@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1516371417115018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6227164, y: 12.4293, z: 0}
+  m_LocalPosition: {x: 501.5178, y: 854.2296, z: 0}
   m_LocalScale: {x: 0.22502494, y: 0.22502494, z: 0.22502494}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +77,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000017881393, y: -0.035596848}
+  m_Offset: {x: 0.037790418, y: -0.1362046}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -88,7 +88,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.6839852, y: 4.2266617}
+  m_Size: {x: 2.4327276, y: 3.8499424}
   m_EdgeRadius: 0
 --- !u!114 &114180839730007416
 MonoBehaviour:
@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8c10c43847c1546a9bc02df6d8fb5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playagain: {fileID: 0}
   scoretext: {fileID: 0}
   GhostAnim: {fileID: 1823624495347912, guid: 4405a9bf8f527434e844e4213bb4beb9, type: 2}
 --- !u!212 &212648211339869860

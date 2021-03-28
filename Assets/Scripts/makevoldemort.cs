@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class makevoldemort : MonoBehaviour {
-
+	public UnityEngine.UI.Button playagain;
 	private float timecounter = 0f;
 	private float vtime = 2.5f;
 	public float vspeed = -100f;
@@ -21,30 +21,30 @@ public class makevoldemort : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
 		if (score.point >= 500)
 			vtime = 2f;
 		if (score.point >= 1000) {
-			vtime = 1f;
+			vtime = 1.5f;
 			vspeed  = -125f;
 		}
-		if (score.point >= 2000) {
-			vtime = 0.80f;
-			vspeed = -150f;
-		}
-		if (score.point >= 3000) {
-			vtime = 0.60f;
+		if (score.point >= 2500) {
+			vtime = 1.25f;
 			vspeed = -175f;
 		}
-		if (score.point >= 6000) {
-			vtime = 0.50f;
+		if (score.point >= 3500) {
+			vtime = 1f;
 			vspeed  = -200f;
 		}
+		if (score.point >= 4000)
+		{
+			vtime = 0.5f;
+			vspeed = -250f;
+		}
 		if (score.point >= 10000){
-			vtime = 0.45f;
+			vtime = 0.35f;
 			vspeed  = -300f;
 		}
-
-
 
 		if (isgameactive == true) 
 		{
@@ -67,6 +67,7 @@ public class makevoldemort : MonoBehaviour {
 			for (int i = 0; i < go.Length; i++) {
 				go [i].GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
 			}
+			playagain.gameObject.SetActive (true);
 		}
 
 

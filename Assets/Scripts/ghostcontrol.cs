@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ghostcontrol : MonoBehaviour {
+
+	public UnityEngine.UI.Button playagain;
 	makevoldemort makevoldemort;
 	makeenemy makeenemy;
 	score score;
@@ -19,22 +21,29 @@ public class ghostcontrol : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider){
 			if (collider.gameObject.tag == "magic") {
+
 				Destroy (this.gameObject);
+
 				controls.gameObject.GetComponent<AudioSource> ().PlayOneShot (controls.ghostVoice, 1f);
 				GameObject go = Instantiate (GhostAnim, transform.position, transform.rotation) as GameObject;
+
 				Destroy (go,0.250f);
 				Destroy (collider.gameObject);
 				score.point += 100;
+				score.Score ();
+
 			}
 			if (collider.gameObject.tag == "border") {
 				Destroy (this.gameObject);
 			}
 			if (collider.gameObject.tag == "Player") {
+
 				collider.gameObject.GetComponent<Animator> ().enabled = true;
 				Destroy (collider.gameObject,4f);
 				collider.gameObject.GetComponent<AudioSource> ().PlayOneShot (controls.deadVoice, 1f);
 				makevoldemort.isgameactive = false;
 				makeenemy.isgameactive = false;
+	
 			}
 		} 
 	

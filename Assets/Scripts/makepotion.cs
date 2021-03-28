@@ -20,11 +20,11 @@ public class makepotion : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (makeenemy.isgameactive == true && score.point > 1500f ) 
+		if (makeenemy.isgameactive == true && score.point > 1000f ) 
 		{
 			for (int i = 0; i < 10000; i++) 
 			{
-				PotionRespawnTime = Random.Range (12,30);
+				PotionRespawnTime = Random.Range (12,26);
 			}
 
 			PotionSpawnTime -=Time.deltaTime;

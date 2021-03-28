@@ -19,8 +19,6 @@ public class collisioncontrol : MonoBehaviour
 
 	void OnCollisionEnter2D (Collision2D collision)
 	{
-
-
 			if (this.gameObject.tag.Equals ("border")) 
 			{
 				if (collision.gameObject.tag.Equals ("magic"))
@@ -33,17 +31,16 @@ public class collisioncontrol : MonoBehaviour
 			{
 				if (collision.gameObject.tag.Equals ("magic"))
 					Destroy (collision.gameObject);
-				else if (collision.gameObject.tag.Equals ("Player")) {
+				else if (collision.gameObject.tag.Equals ("Player")) 
+				{
 					collision.gameObject.GetComponent<Animator> ().enabled = true;
 					Destroy (collision.gameObject, 4f);
 					makevoldemort.isgameactive = false;
 					makeenemy.isgameactive = false;
 					collision.gameObject.GetComponent<AudioSource> ().PlayOneShot (controls.deadVoice, 1f);
 				}
-			}
+			}  
 	}
-
-
 
 }
 
